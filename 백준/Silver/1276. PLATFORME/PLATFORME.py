@@ -11,13 +11,7 @@ for i in range(N):
 
 platform.sort(key=lambda x: (x[0], x[1]))
 
-max = 0
-
-for i in range(N):
-    if platform[i][2] > max:
-        max = platform[i][2]
-
-ground = [0] * max
+ground = [0] * 10001
 
 for i in range(N):
     total += ((platform[i][0] - ground[platform[i][1]])+(platform[i][0] - ground[(platform[i][2]-1)]))
